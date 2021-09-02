@@ -1,0 +1,32 @@
+.mainContaner{
+    background: #fcc91b;
+    background: linear-gradient(0deg, #fcc91b 0%, #f7b121 100%);
+}
+
+.board{
+    min-height: 360px;
+    background-image: url("../../assets/images/board.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.board p,.board h1{
+   max-width: 338px;
+    margin-right:13px;
+}
+.board h1{font-size: 23px}
+.board p{margin-top: 15px}
+@media only screen and (max-width: 630px) {
+    .board{
+        min-height: 415px;
+        background-image: url("../../assets/images/board-mobile.png");
+
+    }
+    .board p,.board h1{
+        max-width: 155px;
+        margin-right:0px;
+    }
+    .board h1{font-size: 15px}
+    .board p{margin-top:5px}
+}
