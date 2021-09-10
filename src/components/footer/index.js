@@ -6,10 +6,10 @@ import {NavLink} from "react-router-dom";
 
 const Footer = () => {
     return (
-        <>
+        <footer>
             <div className={'bg-dark-300 text-light text-center'}>
-                <h3 className={'text-xl mt-2 '}>ارتباط با ما </h3>
-                <div className={'container flex items-center justify-center my-3'}>
+                <h3 className={'text-xl pt-2 '}>ارتباط با ما </h3>
+                <div className={'container flex items-center justify-center py-3'}>
                     <NavLink to={''}>
                         <img src={Pin} alt={'location'} />
                     </NavLink>
@@ -24,7 +24,7 @@ const Footer = () => {
             <div className={'bg-gold-300 text-center py-2 text-xs'}>
                 <div className={'container'}>© آزمونت 2021 . کلیه حقوق این وب سایت متعلق به آزمونت است</div>
             </div>
-        </>
+        </footer>
     );
 };
 

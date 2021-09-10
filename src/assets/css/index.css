@@ -15,7 +15,7 @@
             /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../fonts/iranyekanwebregular.ttf") format("truetype");
     }
     * {
-        @apply transition duration-200 ease-in-out outline-none;
+        @apply transition duration-100 ease-in-out outline-none;
     }
 
     html {
@@ -58,10 +58,7 @@
 /*******component layer********/
 @layer utilities {
 
-    .logo{
-        max-width: 120px;
-    }
-
+    
     #menu-toggle:checked + #menu{
         @apply block;
     }

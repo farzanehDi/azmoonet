@@ -1,8 +1,13 @@
 import React, {useState} from 'react';
 import Logo from '../../assets/images/logo.png';
 import {NavLink} from "react-router-dom";
+import styled from "styled-components";
 
 const Header = () => {
+
+    const LogoImage = styled.img`
+      max-width: 120px;
+    `;
 
     const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -26,14 +31,14 @@ const Header = () => {
                             </div>
                             <div className={toggleMenu ? "md:flex md:pt-0 pt-3 w-full sm:w-auto" : "hidden sm:flex"}
                                  id="menu">
-                                <ul className={'grid gap-2 sm:grid-cols-4'}>
-                                    <li className="sm:inline-block hover:text-gold py-2">
+                                <ul className={''}>
+                                    <li className="sm:inline-block hover:text-gold py-2 ml-16">
                                         <NavLink to={''}>ورود</NavLink>
                                     </li>
-                                    <li className="dropdown sm:inline-block hover:text-gold py-2">
+                                    <li className="dropdown sm:inline-block hover:text-gold py-2 ml-16">
                                         <NavLink to={''}>ارتباط با ما</NavLink>
                                     </li>
-                                    <li className="sm:inline-block hover:text-gold py-2">
+                                    <li className="sm:inline-block hover:text-gold py-2 ml-16">
                                         <NavLink to={''}>آزمون ها</NavLink>
                                     </li>
                                     <li className="sm:inline-block hover:text-gold py-2">
@@ -43,7 +48,7 @@ const Header = () => {
                             </div>
                         </div>
 
-                        <img src={Logo} alt={'آزمونت'} className={`-mt-4 logo`}/>
+                        <LogoImage src={Logo} alt={'آزمونت'} className={`-mt-4`}/>
                     </div>
                 </div>
             </div>
