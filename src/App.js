@@ -11,6 +11,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 
 const Home = React.lazy(() => import('./pages/home/index'));
+const Questions = React.lazy(() => import('./pages/questions/index'));
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                                 <Switch>
 
                                     <Route exact path="/" component={Home}/>
+                                    <Route path="/questions" component={Questions}/>
 
                                 </Switch>
                             </div>

@@ -15,7 +15,7 @@
             /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("../fonts/iranyekanwebregular.ttf") format("truetype");
     }
     * {
-        @apply transition duration-100 ease-in-out outline-none;
+        @apply transition-all duration-200 ease-in-out outline-none;
     }
 
     html {
@@ -42,8 +42,10 @@
     }
 
     .siteContent {
-        flex: 1 0 auto;
         @apply w-full;
+        flex: 1 0 auto;
+        background: #fcc91b;
+        background: linear-gradient(0deg, #fcc91b 0%, #f7b121 100%);
     }
 
     .siteContent:after {

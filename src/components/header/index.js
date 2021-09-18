@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
         <header>
-            <div className={'bg-gold absolute top-0 right-0 left-0'}>
+            <div className={'bg-gold absolute top-0 right-0 left-0 z-10'}>
                 <div className={"bg-light py-1 mt-7"}>
                     <div className={'container flex items-start sm:items-center justify-between'}>
                         <div>
@@ -39,7 +39,7 @@ const Header = () => {
                                         <NavLink to={''}>ارتباط با ما</NavLink>
                                     </li>
                                     <li className="sm:inline-block hover:text-gold py-2 ml-16">
-                                        <NavLink to={''}>آزمون ها</NavLink>
+                                        <NavLink to={'/questions'}>آزمون ها</NavLink>
                                     </li>
                                     <li className="sm:inline-block hover:text-gold py-2">
                                         <NavLink to={''}>تحلیل آزمون ها</NavLink>
@@ -48,7 +48,10 @@ const Header = () => {
                             </div>
                         </div>
 
-                        <LogoImage src={Logo} alt={'آزمونت'} className={`-mt-4`}/>
+                        <NavLink to={'/'}  className={`-mt-4`}>
+                            <LogoImage src={Logo} alt={'آزمونت'}/>
+                        </NavLink>
+
                     </div>
                 </div>
             </div>

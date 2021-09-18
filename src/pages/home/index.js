@@ -8,7 +8,7 @@ const Home = () => {
 
     return (
 
-        <main>
+        <main className={'bg-light'}>
             <HomeBoardSection/>
             <WhyAzmoonet/>
             <WayOfSuccess/>
