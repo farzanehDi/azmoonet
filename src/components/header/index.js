@@ -33,10 +33,10 @@ const Header = () => {
                                  id="menu">
                                 <ul className={''}>
                                     <li className="sm:inline-block hover:text-gold py-2 ml-16">
-                                        <NavLink to={''}>ورود</NavLink>
+                                        <NavLink to={'/login'}>ورود</NavLink>
                                     </li>
                                     <li className="dropdown sm:inline-block hover:text-gold py-2 ml-16">
-                                        <NavLink to={''}>ارتباط با ما</NavLink>
+                                        <NavLink to={'/contactUs'}>ارتباط با ما</NavLink>
                                     </li>
                                     <li className="sm:inline-block hover:text-gold py-2 ml-16">
                                         <NavLink to={'/questions'}>آزمون ها</NavLink>

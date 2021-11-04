@@ -14,13 +14,15 @@ module.exports = {
            },
             light: {
                 DEFAULT: '#ffffff',
+                "200":'#9c9c9c',
             },
             dark: {
                 DEFAULT: '#000000',
-                "300":'#343434'
+                "300":'#343434',
             },
             orange: {
                 DEFAULT: '#ea5b27',
+                light: '#f4b641',
             },
         },
     },

@@ -13,7 +13,6 @@ const Navigation = (props) => {
         if (step !== 0) {
             setStep((prevStep)=>prevStep - 1);
             scroller.scrollTo(step, {smooth: true, containerId: 'containerSteps', duration: 200});
-
         }
 
     };
@@ -23,7 +22,6 @@ const Navigation = (props) => {
         if (step < props.totalSteps) {
             setStep((prevStep)=>prevStep + 1);
             scroller.scrollTo(step, {smooth: true, containerId: 'containerSteps', duration: 200});
-
         }
 
     };

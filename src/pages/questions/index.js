@@ -1,44 +1,41 @@
 import React from 'react';
-import StepWizard from "react-step-wizard";
+import AnswerSheet from "../../components/answerSheet";
 import styled from "styled-components";
-import Question from "../../components/question";
-import Navigation from "../../components/navigation";
 
 const Questions = () => {
 
-    // const QuestionContainer = styled.main`
-    //   //background: #fcc91b;
-    //   //background: linear-gradient(0deg, #fcc91b 0%, #f7b121 100%);
-    // `;
+    const QuestionContainer = styled.div`
+      background-color: white;
+      border: dashed black 2px;
+      border-radius: 9px;
+      min-height: 70px;
+      padding:6px;
+      margin-bottom: 20px;
+    `;
 
     return (
-            // <QuestionContainer className={'absolute h-full right-0 left-0'}>
-            // <QuestionContainer className={''}>
-                <main className={'container overflow-x-hidden'}>
-                    {/*<div className={`w-full overflow-x-hidden`}>*/}
-                        <StepWizard
-                            isLazyMount={true}
-                            nav={window.innerWidth>650 && <Navigation/>}
-                        >
-                            <Question/>
-                            <Question/>
-                            <Question/>
-                            <Question/>
-                            <Question/>
-                            <Question/>
-                            <Question/>
-                            <Question/>
-                            <Question/>
-                            <Question/>
-                            <Question/>
-                            <Question/>
-                            <Question/>
-                        </StepWizard>
-                    {/*</div>*/}
+        <main className={'container flex justify-center my-3 gap-2'}>
+            <div className={'lg:w-2/4 w-2/3'}>
+                <QuestionContainer>
+                    سوال 1 -
+                </QuestionContainer>
+                <QuestionContainer>
+                    سوال 2 -
+                </QuestionContainer>
+                <QuestionContainer>
+                    سوال 3 -
+                </QuestionContainer>
+                <QuestionContainer>
+                    سوال 4 -
+                </QuestionContainer>
+            </div>
 
-                </main>
-           // </QuestionContainer>
+            <div className={'w-1/3 bg-dark'}>
+                <AnswerSheet/>
+            </div>
 
+
+        </main>
     );
 };
 

@@ -12,6 +12,9 @@ import Footer from "./components/footer";
 
 const Home = React.lazy(() => import('./pages/home/index'));
 const Questions = React.lazy(() => import('./pages/questions/index'));
+const ContactUs = React.lazy(() => import('./pages/contactUs/index'));
+const Login = React.lazy(() => import('./pages/login/index'));
+const Register = React.lazy(() => import('./pages/register/index'));
 
 function App() {
     return (
@@ -26,6 +29,9 @@ function App() {
 
                                     <Route exact path="/" component={Home}/>
                                     <Route path="/questions" component={Questions}/>
+                                    <Route path="/contactUs" component={ContactUs}/>
+                                    <Route path="/login" component={Login}/>
+                                    <Route path="/register" component={Register}/>
 
                                 </Switch>
                             </div>
