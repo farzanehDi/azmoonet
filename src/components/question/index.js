@@ -11,6 +11,7 @@ const Question = (props) => {
     const QuestionTextContainer = styled.div`
       min-height: 120px;
     `;
+
     const RobotImage = styled.img`
       max-width: 150px;
       bottom: 20px;
@@ -68,7 +69,6 @@ const Question = (props) => {
                     </div>
 
                 </div>
-
 
             </div>
             <RobotImage src={QuestionRobot} alt={'آزمونت'} className={'absolute hidden md:block'}/>

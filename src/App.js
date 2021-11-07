@@ -15,6 +15,7 @@ const Questions = React.lazy(() => import('./pages/questions/index'));
 const ContactUs = React.lazy(() => import('./pages/contactUs/index'));
 const Login = React.lazy(() => import('./pages/login/index'));
 const Register = React.lazy(() => import('./pages/register/index'));
+const Answers = React.lazy(() => import('./pages/answers/index'));
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                                     <Route path="/contactUs" component={ContactUs}/>
                                     <Route path="/login" component={Login}/>
                                     <Route path="/register" component={Register}/>
+                                    <Route path="/answers" component={Answers}/>
 
                                 </Switch>
                             </div>

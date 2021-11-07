@@ -7,7 +7,7 @@ import {NavLink} from "react-router-dom";
 const Footer = () => {
     return (
         <footer>
-            <div className={'bg-dark-300 text-light text-center'}>
+            <div className={'bg-dark-200 text-light text-center'}>
                 <h3 className={'text-xl pt-2 '}>ارتباط با ما </h3>
                 <div className={'container flex items-center justify-center py-3'}>
                     <NavLink to={''}>

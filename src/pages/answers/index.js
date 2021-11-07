@@ -1,9 +1,9 @@
 import React from 'react';
-import AnswerSheet from "../../components/answerSheet";
+import AnswerSheetReply from "../../components/answerSheetReply";
 import styled from "styled-components";
 import Image from "../../assets/images/questionImg.png";
 
-const Questions = () => {
+const Answers = () => {
 
     const QuestionContainer = styled.div`
       background-color: white;
@@ -32,10 +32,10 @@ const Questions = () => {
             </div>
 
             <div className={'text-center'}>
-                <AnswerSheet/>
+                <AnswerSheetReply/>
                 <button
-                    className={'w-full mt-2 hover:text-dark bg-light text-light rounded-xl bg-orange px-1 py-3 text-lg border-4 border-light'}>ثبت و
-                    پایان آزمون
+                    className={'w-full mt-2 hover:text-dark bg-light text-light rounded-xl bg-orange px-1 py-3 text-lg border-4 border-light'}>
+                    درصد احتمالی کنکور
                 </button>
                 <img src={Image} className={'mx-auto mt-2'} alt={'آزمونت'}/>
 
@@ -46,4 +46,4 @@ const Questions = () => {
     );
 };
 
-export default Questions;
+export default Answers;

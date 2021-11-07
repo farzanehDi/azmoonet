@@ -3,7 +3,7 @@ import styled from "styled-components";
 import InputImg from "../../assets/images/inputRadio.png";
 import CheckedInputImg from "../../assets/images/inputRadioChecked.png";
 
-const AnswerSheet = () => {
+const AnswerSheetReply = () => {
 
     const Input = styled.input`
       content: url(${InputImg});
@@ -38,4 +38,4 @@ const AnswerSheet = () => {
     );
 };
 
-export default AnswerSheet;
+export default AnswerSheetReply;
