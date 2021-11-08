@@ -123,4 +123,8 @@
     .menu-btn:checked ~ .menu-icon .navicon::after {
         @apply top-0;
     }
+
+    .selectedStar{
+        -webkit-text-fill-color: #fcc91b !important;
+    }
 }
