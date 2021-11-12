@@ -4,12 +4,24 @@ import '../src/assets/css/index.css';
 import '../src/assets/css/all.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import LoadingFallback from "./components/lodingFallback";
+import {applyMiddleware, createStore} from "redux";
+import reducers from "./reducers";
+import ReduxThunk from "redux-thunk";
+import {BrowserRouter} from "react-router-dom";
+import {Provider} from "react-redux";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <BrowserRouter>
+            <React.Suspense fallback={<LoadingFallback/>}>
+                <Provider store={createStore(reducers, {}, applyMiddleware(ReduxThunk))}>
+                    <App/>
+                </Provider>
+            </React.Suspense>
+        </BrowserRouter>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

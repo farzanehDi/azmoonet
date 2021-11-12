@@ -4,7 +4,6 @@ import InputImg from '../../assets/images/radioBtn.png';
 import CheckedInputImg from '../../assets/images/checkedInput.png';
 import ArrowBtn from "../arrowBtn";
 import RocketImg from '../../assets/images/rocketQuestion.png';
-import QuestionRobot from '../../assets/images/questionRobot.png';
 
 const Question = (props) => {
 
@@ -12,13 +11,6 @@ const Question = (props) => {
       min-height: 120px;
     `;
 
-    const RobotImage = styled.img`
-      max-width: 150px;
-      bottom: 20px;
-      left: auto;
-      margin-right: -100px;
-      z-index: -1;
-    `;
 
     const Input = styled.input`
       content: url(${InputImg});
@@ -32,8 +24,8 @@ const Question = (props) => {
     `;
 
     return (
-        <div className={'w-full sm:w-4/5 md:w-3/5 mx-auto'}>
-            <div className={'flex items-center justify-between md:mt-14 mt-3'}>
+        <div className={'w-11/12'}>
+            <div className={'flex items-center justify-between mt-3'}>
                 <div className={'flex items-center'}>
                     <div className={'h-2 w-2 bg-orange rounded-full ml-2'}></div>
                     <p className={'text-xl font-semibold'}>سوال شماره <span
@@ -71,7 +63,7 @@ const Question = (props) => {
                 </div>
 
             </div>
-            <RobotImage src={QuestionRobot} alt={'آزمونت'} className={'absolute hidden md:block'}/>
+
             <ArrowBtn {...props}/>
 
         </div>

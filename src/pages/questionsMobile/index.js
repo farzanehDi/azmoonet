@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Question from "../../components/question";
 import Navigation from "../../components/navigation";
 
-const Questions = () => {
+const QuestionsMobile = () => {
 
     // const QuestionContainer = styled.main`
     //   //background: #fcc91b;
@@ -18,7 +18,7 @@ const Questions = () => {
                     {/*<div className={`w-full overflow-x-hidden`}>*/}
                         <StepWizard
                             isLazyMount={true}
-                            nav={window.innerWidth>650 && <Navigation/>}
+                            nav={ <Navigation/>}
                         >
                             <Question/>
                             <Question/>
@@ -42,4 +42,4 @@ const Questions = () => {
     );
 };
 
-export default Questions;
+export default QuestionsMobile;

@@ -21,6 +21,9 @@ const WhyAzmoonet = () => {
                     <h2 className={'mb-5 font-bold bg-gold w-max px-3 py-2 rounded'}>چرا آزمونت؟</h2>
                     <p className={'text-justify font-semibold text-base'}>در آزمونت هر یک از دانش آموزان دارای پرونده تحصیلی بوده و روند طی شده در راستای آموزشی هر آزمون
                         ثبت و ضبط می گردد.</p>
+                    <p className={'text-justify font-semibold text-base mt-3'}>
+                        تو آزمونت هربار یکی از مباحثی که میدونیم بلد نیستی رو یاد میگیریم که همین کارمون رو آسون میکنه.
+                    </p>
                 </div>
             </div>
         </Container>

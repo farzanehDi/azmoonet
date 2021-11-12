@@ -31,18 +31,18 @@ const Navigation = (props) => {
     }
 
     return (
-        <div className={`absolute left-0 w-10 rounded-r-3xl bg-orange z-10`}>
+        <div className={`absolute left-0 w-8 rounded-r-3xl bg-orange z-9`}>
             <div onClick={preStep} className={'text-center py-2 cursor-pointer pr-1'}>
                 <img src={step>1?Arrow:ArrowFull} alt={'قبلی'} className={`${step>1 && 'rotate-180 transform'} mx-auto `}/>
             </div>
 
 
-            <Element id={'containerSteps'} style={{height: 250}} className={` flex flex-col 
+            <Element id={'containerSteps'} style={{height: 270}} className={` flex flex-col 
             overflow-hidden `}>
                 {
                     [...Array(props.totalSteps)].map((step, i) =>(
 
-                        <Element name={`${i+1}`} className={`cursor-pointer text-light text-center py-3`}>
+                        <Element name={`${i+1}`} className={`cursor-pointer text-light text-center py-2`}>
                             <span className={`font-bold text-lg`} onClick={()=>goSelectedStep(i+1)}>{i+1}</span>
                         </Element>
                     ))
