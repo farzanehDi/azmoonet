@@ -25,6 +25,9 @@ module.exports = {
                 DEFAULT: '#ea5b27',
                 light: '#f4b641',
             },
+            green: {
+                DEFAULT: '#0a5f1c',
+            },
         },
     },
     variants: {

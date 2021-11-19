@@ -1,0 +1,28 @@
+.bmItemList{
+    width:100%!important;
+}
+.menuClass{
+    border-top-left-radius: 60px;
+    border-left: solid 8px #ea5b27;
+}
+.bmItem {
+    display: flex !important;
+}
+
+.bmItem a {
+    color: #ffffff;
+    padding:0 20px;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    border-bottom: solid 3px #ea5b27;
+}
+.bmItem a:hover {
+    color: #ea5b27;
+   }
+
+.activeLink {
+    color: rgb(243, 147, 117) !important;
+}

@@ -1,9 +1,8 @@
-import React, {useEffect} from 'react';
-import {Route, Switch, Router} from "react-router-dom";
+import React from 'react';
+import {Switch, Router,Route} from "react-router-dom";
 import history from "./utilities/history";
-import Header from "./components/header";
-import Footer from "./components/footer";
 import {useViewport} from "./utilities/hook";
+import NormalRoute from "./utilities/normalRoute";
 
 const Home = React.lazy(() => import('./pages/home/index'));
 const Questions = React.lazy(() => import('./pages/questions/index'));
@@ -13,6 +12,7 @@ const Login = React.lazy(() => import('./pages/login/index'));
 const Register = React.lazy(() => import('./pages/register/index'));
 const Answers = React.lazy(() => import('./pages/answers/index'));
 const AnswersMobile = React.lazy(() => import('./pages/answersMobile/index'));
+const ProfileRoutes = React.lazy(() => import('./pages/profileRoutes/index'));
 
 function App() {
 
@@ -20,23 +20,19 @@ function App() {
 
     return (
         <Router history={history}>
-            <div className="site">
-                <Header/>
-                <div className={'siteContent'} style={{marginTop: 73}}>
+
                     <Switch>
 
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/questions" component={width <=600 ? QuestionsMobile : Questions}/>
-                        <Route path="/answers" component={width <=600 ?AnswersMobile:Answers}/>
-                        <Route path="/contactUs" component={ContactUs}/>
-                        <Route path="/login" component={Login}/>
-                        <Route path="/register" component={Register}/>
+                        <NormalRoute exact path="/" component={Home}/>
+                        <NormalRoute path="/questions" component={width <=600 ? QuestionsMobile : Questions}/>
+                        <NormalRoute path="/answers" component={width <=600 ?AnswersMobile:Answers}/>
+                        <NormalRoute path="/contactUs" component={ContactUs}/>
+                        <NormalRoute path="/login" component={Login}/>
+                        <NormalRoute path="/register" component={Register}/>
+                        <Route path="/profile" component={ProfileRoutes}/>
 
                     </Switch>
-                </div>
-                <Footer/>
 
-            </div>
         </Router>
 
 
