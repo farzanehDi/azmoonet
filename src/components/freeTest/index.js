@@ -64,7 +64,7 @@ const FreeTest = () => {
                     </div>
                 </div>
                 <div className={'sm:w-1/3 lg:w-1/2 w-full flex items-center justify-center'}>
-                    <NavLink to={'/'} className={'bg-gold px-4 py-2 rounded-xl font-semibold text-lg hover:text-light'}>
+                    <NavLink to={'/questions'} className={'bg-gold px-4 py-2 rounded-xl font-semibold text-lg hover:text-light'}>
                         بریم آزمون رایگان
                     </NavLink>
 

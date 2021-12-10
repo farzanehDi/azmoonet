@@ -24,7 +24,7 @@ const HeaderProfile = () => {
                         <div>
                             <div className={'bg-light rounded-xl px-2 py-1 mb-1 text-xs'}>
                                 <span>نام و نام خانوادگی: </span>
-                                <span>فرزانه داداشی </span>
+                                <span>کاربر تستی </span>
                             </div>
                             <div className={'bg-light rounded-xl px-2 py-1 text-xs'}>
                                 <span>مقطع تحصیلی: </span>

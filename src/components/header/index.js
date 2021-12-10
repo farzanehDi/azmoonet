@@ -15,6 +15,12 @@ const Header = () => {
         setToggleMenu(!toggleMenu)
     };
 
+    const clickMenu=()=>{
+        // alert('ok');
+        document.getElementById('clicked').click();
+        setToggleMenu(!toggleMenu)
+    };
+
     return (
         <header>
             <div className={'bg-gold absolute top-0 right-0 left-0 z-10'}>
@@ -23,7 +29,7 @@ const Header = () => {
                         <div>
                             <div className="cursor-pointer sm:hidden">
                                 <input className="menu-btn hidden" type="checkbox" id="menu-btn"/>
-                                <label
+                                <label id={'clicked'}
                                     className="menu-icon block cursor-pointer sm:hidden px-2 py-4 relative select-none"
                                     htmlFor="menu-btn">
                                     <span onClick={handleToggle} className="navicon flex items-center relative"></span>
@@ -33,16 +39,16 @@ const Header = () => {
                                  id="menu">
                                 <ul className={''}>
                                     <li className="sm:inline-block hover:text-gold py-2 ml-16">
-                                        <NavLink to={'/login'}>ورود</NavLink>
+                                        <NavLink to={'/login'} onClick={clickMenu}>ورود</NavLink>
                                     </li>
                                     <li className="dropdown sm:inline-block hover:text-gold py-2 ml-16">
-                                        <NavLink to={'/contactUs'}>ارتباط با ما</NavLink>
+                                        <NavLink to={'/contactUs'} onClick={clickMenu}>ارتباط با ما</NavLink>
                                     </li>
                                     <li className="sm:inline-block hover:text-gold py-2 ml-16">
-                                        <NavLink to={'/questions'}>آزمون ها</NavLink>
+                                        <NavLink to={'/questions'} onClick={handleToggle}>آزمون ها</NavLink>
                                     </li>
                                     <li className="sm:inline-block hover:text-gold py-2">
-                                        <NavLink to={''}>تحلیل آزمون ها</NavLink>
+                                        <NavLink to={''} onClick={handleToggle}>تحلیل آزمون ها</NavLink>
                                     </li>
                                 </ul>
                             </div>

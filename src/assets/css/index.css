@@ -59,11 +59,19 @@
     input[type='text'],input[type='number'],input[type='password'],select,textarea{
         @apply rounded border border-light-200 focus:border-gold-300 focus:shadow-md p-2;
     }
+    .borderRed{
+       border-color: #FF0000!important;
+    }
 
     .blackBtn{
         @apply rounded-full text-light p-2 hover:shadow-md hover:text-gold transition-all duration-200 ease-in;
         background: rgb(97,97,97);
         background: radial-gradient(circle, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+    }
+
+    /****toast***/
+    .Toastify__toast-body {
+        font-family: 'yekan';
     }
 
 }
