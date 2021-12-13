@@ -24,14 +24,14 @@ const QuestionsMobile = () => {
         axios(Routers.GET_QUESTION_ID)
             .then(function (response) {
 
-                console.log('questions_id', response.data);
+                // console.log('questions_id', response.data);
                 setQuestionID(response.data.id);
 
                 //***get questions image***
                 axios(`${Routers.GET_QUESTIONS}/${response.data.id}`)
                     .then(function (response) {
 
-                        console.log('questions', response.data)
+                        // console.log('questions', response.data)
                         dispatch({type: 'loading', payload: false});
 
                         response.data.length > 0 && setQuestion(response.data)

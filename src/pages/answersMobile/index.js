@@ -20,14 +20,14 @@ const AnswersMobile = () => {
         axios(`${Routers.GET_QUIZ_INFO}/${id}`)
             .then(function (response) {
 
-                console.log('get quiz info', response.data);
+                // console.log('get quiz info', response.data);
                 setAnswers(response.data.answers);
                 setTrueAnswers(response.data.rightAnswers);
                 //***get questions image***
                 axios(`${Routers.GET_QUESTIONS}/${response.data.id}`)
                     .then(function (response) {
 
-                        console.log('questions', response.data)
+                        // console.log('questions', response.data)
                         dispatch({type: 'loading', payload: false});
 
                         response.data.length > 0 && setQuestionAnswers(response.data)

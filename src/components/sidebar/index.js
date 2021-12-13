@@ -26,16 +26,19 @@ const Sidebar = (props) => {
     },[width])
 
     useEffect(() => {
-        const elements = document.querySelectorAll('a');
-        Array.from(elements).forEach((element) => {
-            element.addEventListener('click', handleClick)
-        })
-
-        return () => {
+        if(width<=550){
+            const elements = document.querySelectorAll('a');
             Array.from(elements).forEach((element) => {
-                element.removeEventListener('click', handleClick)
+                element.addEventListener('click', handleClick)
             })
+
+            return () => {
+                Array.from(elements).forEach((element) => {
+                    element.removeEventListener('click', handleClick)
+                })
+            }
         }
+
     }, [])
 
 
@@ -52,7 +55,7 @@ const Sidebar = (props) => {
 
         <Menu isOpen={open} width={200} right noOverlay
               customBurgerIcon={<img src={statusIcon} alt={'menu'}/>}
-              className={`top-24 right-0`}
+              className={`${width>550?'top-24':'top-16'} right-0`}
               onStateChange={(state) => handleStateChange(state)}
               burgerButtonClassName={`${width<=550?'fixed right-5 top-5':'hidden'}`}
               menuClassName={`bg-dark w-full ${Style.menuClass}`}
@@ -60,21 +63,21 @@ const Sidebar = (props) => {
               pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }  >
             <div
                 className={`${Style.bmItem} flex-col  justify-center ${width <= 550 ? 'divide-y divide-gray-lighter' : ''}`}>
-                <NavLink to={"/profile/myLessons"} activeClassName={Style.activeLink}>
+                <NavLink to={"/profile"} activeClassName={Style.activeLink}>
                     درس های من
                 </NavLink>
 
-                <NavLink to={"/w"} activeClassName={Style.activeLink}>
+                <NavLink to={"/"} activeClassName={Style.activeLink}>
                     آزمون های من
                 </NavLink>
 
-                <NavLink to={"/ww"} activeClassName={Style.activeLink}>
+                <NavLink to={"/"} activeClassName={Style.activeLink}>
                     درسنامه های من
                 </NavLink>
-                <NavLink to={"/www"} activeClassName={Style.activeLink}>
+                <NavLink to={"/"} activeClassName={Style.activeLink}>
                     سوال های ستاره دار
                 </NavLink>
-                <NavLink to={"/wwww"} activeClassName={Style.activeLink}>
+                <NavLink to={"/"} activeClassName={Style.activeLink}>
                     رتبه من
                 </NavLink>
 

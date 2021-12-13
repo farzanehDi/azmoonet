@@ -3,11 +3,13 @@ import axios from "axios";
 import {Routers} from "../../utilities/configUrl";
 import {useDispatch} from "react-redux";
 import history from "../../utilities/history";
+import { useLocation } from 'react-router-dom'
 
 const ArrowBtn = (props) => {
 
 
     const dispatch = useDispatch();
+    const location = useLocation();
 
     const nextStep = () => {
 
@@ -25,10 +27,10 @@ const ArrowBtn = (props) => {
             }
             //*******
 
-            axios(`${Routers.POST_ANSWERS}?answers=${[...answersArray]}&id=${props.dataQuestionId}`)
+            axios({method:'POST',url:`${Routers.POST_ANSWERS}?answers=${answersArray.join("")}&id=${props.dataQuestionId}`})
                 .then(function (response) {
 
-                    console.log('send answers', response.data)
+                    // console.log('send answers', response.data)
                     dispatch({type: 'loading', payload: false});
                     history.push(`/answers/${props.dataQuestionId}`)
 
@@ -53,8 +55,8 @@ const ArrowBtn = (props) => {
     return (
 
             <div className={'flex items-center justify-center space-x-reverse flex-wrap space-x-2 mb-5 py-4 mt-5'}>
-
-                <button className={`rounded-2xl hover:shadow-md border border-orange hover:border-gold ${props.totalSteps === props.currentStep &&'hidden'}
+                  <button className={`rounded-2xl hover:shadow-md border border-orange hover:border-gold
+                 ${(props.totalSteps === props.currentStep)&& location.pathname!='/questions' &&'hidden'}
                 bg-orange text-light py-1 px-3`} onClick={nextStep}>
                     {props.totalSteps === props.currentStep && props.currentStep !== 1 ? 'ثبت سوالات' : 'سوال بعدی'}
                 </button>

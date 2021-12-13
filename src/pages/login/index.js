@@ -49,7 +49,7 @@ const Login = () => {
         axios({method:'POST',url:`${Routers.LOGIN}?phoneNumber=${fixNumbers(mobile)}&password=${password}`})
             .then(function (response) {
 
-                console.log('response',response.data)
+                // console.log('response',response.data)
                 dispatch({type: 'loading', payload: false});
 
                 if(response.data.errorCode==200 || response.data.errorCode==201){

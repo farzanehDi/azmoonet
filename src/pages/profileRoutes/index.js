@@ -24,7 +24,7 @@ const ProfileRoutes = () => {
     return (
         <div id="outer-container" className={'h-full bg-gold'}>
             <HeaderProfile/>
-            <PageWrap id="page-wrap" className={`mt-24 container`}>
+            <PageWrap id="page-wrap" className={`${width>550?'mt-24':'mt-16'} container`}>
                 <Route  exact path="/profile" component={MyLessons}/>
             </PageWrap>
         </div>
