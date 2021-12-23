@@ -10,5 +10,7 @@ export const Routers={
     "GET_QUESTIONS":'/quiz/getQuestions',
     "POST_ANSWERS":'/quiz/answers',
     "GET_QUIZ_INFO":'/quiz/getQuizInfo',
+    "COURSE_LIST":'/user/profile/paid',
+    "TEXT_BOOK":'/user/profile/subject',
 
 };

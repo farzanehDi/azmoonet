@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Image from "../../assets/images/questionImg.png";
 import axios from "axios";
 import {Routers} from "../../utilities/configUrl";
-import {toast} from "react-toastify";
 import history from "../../utilities/history";
 import {useDispatch} from "react-redux";
 

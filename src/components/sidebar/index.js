@@ -1,20 +1,17 @@
 import React, {useState, useEffect} from "react";
-import {useDispatch} from "react-redux";
 import {slide as Menu} from "react-burger-menu";
 import openMenu from "../../assets/images/menu.png";
 import closeMenu from "../../assets/images/close.png";
 import {NavLink} from "react-router-dom";
-// import {useSelector} from "react-redux";
+import history from "../../utilities/history";
 import {useViewport} from "../../utilities/hook";
 import Style from './sidebar.module.css';
 
 
 const Sidebar = (props) => {
 
-    const dispatch = useDispatch();
     const {width} = useViewport();
     const [statusIcon, setStatusIcon] = useState(openMenu)
-    // const isLogin = useSelector(state => state.auth.isLogin);
     const [open, setOpen] = useState();
 
     const handleClick = (event) =>  {
@@ -39,7 +36,7 @@ const Sidebar = (props) => {
             }
         }
 
-    }, [])
+    }, [width])
 
 
     const handleStateChange = (status) => {
@@ -49,6 +46,12 @@ const Sidebar = (props) => {
         } else {
             setStatusIcon(openMenu);
         }
+    }
+
+    const exitPanel=()=>{
+
+        localStorage.removeItem('token');
+        history.push('/');
     }
 
     return (
@@ -63,24 +66,26 @@ const Sidebar = (props) => {
               pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }  >
             <div
                 className={`${Style.bmItem} flex-col  justify-center ${width <= 550 ? 'divide-y divide-gray-lighter' : ''}`}>
-                <NavLink to={"/profile"} activeClassName={Style.activeLink}>
+                <NavLink exact to={"/profile"} activeClassName={Style.activeLink}>
                     درس های من
                 </NavLink>
 
-                <NavLink to={"/"} activeClassName={Style.activeLink}>
+                <NavLink to={"/profile/rere"} activeClassName={Style.activeLink}>
                     آزمون های من
                 </NavLink>
 
-                <NavLink to={"/"} activeClassName={Style.activeLink}>
+                <NavLink to={"/profile/eeee"} activeClassName={Style.activeLink}>
                     درسنامه های من
                 </NavLink>
-                <NavLink to={"/"} activeClassName={Style.activeLink}>
+                <NavLink to={"/profile/eee"} activeClassName={Style.activeLink}>
                     سوال های ستاره دار
                 </NavLink>
-                <NavLink to={"/"} activeClassName={Style.activeLink}>
+                <NavLink to={"/profile/eee"} activeClassName={Style.activeLink}>
                     رتبه من
                 </NavLink>
-
+                <NavLink to={"/"} onClick={exitPanel}>
+                    خروج
+                </NavLink>
 
             </div>
 

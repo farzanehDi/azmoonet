@@ -18,21 +18,21 @@ const HeaderProfile = () => {
         <>
 
             <div
-                className={` fixed  top-0 left-0 right-0 z-50 bg-gold py-3 px-4`}>
-                <div className={`flex items-center ${width>500?'justify-between':'justify-end'}`}>
+                className={`shadow-md fixed  top-0 left-0 right-0 z-50 bg-gold py-2 px-4`}>
+                <div className={`flex items-center ${width>550?'justify-between':'justify-end'}`}>
 
                     {
-                        width>500 &&
+                        width>550 &&
                         <div className={'flex items-center flex-wrap'}>
                             <img src={Avatar} className={'rounded-full w-16 h-16 ml-1'} alt={'user avatar'}/>
                             <div>
                                 <div className={'bg-light rounded-xl px-2 py-1 mb-1 text-xs'}>
                                     <span>نام و نام خانوادگی: </span>
-                                    <span>کاربر تستی </span>
+                                    <span>---- </span>
                                 </div>
                                 <div className={'bg-light rounded-xl px-2 py-1 text-xs'}>
                                     <span>مقطع تحصیلی: </span>
-                                    <span>سوم راهنمایی</span>
+                                    <span>---------</span>
                                 </div>
                             </div>
                         </div>
@@ -40,7 +40,7 @@ const HeaderProfile = () => {
 
 
 
-                    <NavLink to={'/'} className={`-mt-3`}>
+                    <NavLink to={'/'} className={width>550 && '-mt-3'}>
                         <LogoImage src={Logo} alt={'آزمونت'}/>
                     </NavLink>
                 </div>

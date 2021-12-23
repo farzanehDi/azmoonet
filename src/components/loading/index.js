@@ -10,7 +10,7 @@ const Loading = () => {
         <>
             {
                  loading && <div
-                    className={"flex fixed w-auto h-auto bg-dark bg-opacity-25 top-0 bottom-0 left-0 right-0 z-30 flex-col justify-center items-center "}>
+                    className={"flex fixed w-auto h-auto bg-dark bg-opacity-25 top-0 bottom-0 left-0 right-0 z-50 flex-col justify-center items-center "}>
                     <div className={"py-3 px-5 bg-light rounded border border-light-200"}>
                         <img src={LogoImg} alt="فالنیک" className={"mb-3"}/>
                         {/* ****loading**** */}

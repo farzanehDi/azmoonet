@@ -39,16 +39,20 @@ const Header = () => {
                                  id="menu">
                                 <ul className={''}>
                                     <li className="sm:inline-block hover:text-gold py-2 ml-16">
-                                        <NavLink to={'/login'} onClick={clickMenu}>ورود</NavLink>
+                                        <NavLink
+                                            to={localStorage.getItem('token') ? '/profile' : '/login'}
+                                            onClick={clickMenu}>
+                                            {localStorage.getItem('token') ?'پنل کاربری':'ورود'}
+                                        </NavLink>
                                     </li>
                                     <li className="dropdown sm:inline-block hover:text-gold py-2 ml-16">
                                         <NavLink to={'/contactUs'} onClick={clickMenu}>ارتباط با ما</NavLink>
                                     </li>
                                     <li className="sm:inline-block hover:text-gold py-2 ml-16">
-                                        <NavLink to={'/questions'} onClick={handleToggle}>آزمون ها</NavLink>
+                                        <NavLink to={'/questions'} onClick={clickMenu}>آزمون ها</NavLink>
                                     </li>
                                     <li className="sm:inline-block hover:text-gold py-2">
-                                        <NavLink to={''} onClick={handleToggle}>تحلیل آزمون ها</NavLink>
+                                        <NavLink to={''} onClick={clickMenu}>تحلیل آزمون ها</NavLink>
                                     </li>
                                 </ul>
                             </div>

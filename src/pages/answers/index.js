@@ -58,7 +58,7 @@ const Answers = () => {
             dispatch({type: 'loading', payload: false});
             console.log('get quiz info  error', error)
         });
-    },[dispatch])
+    },[dispatch, id])
 
     return (
         <main className={'container flex justify-center items-start my-3 gap-2'}>
